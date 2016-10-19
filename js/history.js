@@ -39,7 +39,7 @@ if (!!(window.history && history.pushState)) {
                     breadcrumbs += '<a href="' + currentPath + '">' + window.unescape(segments[i]) + '<\/a>';
                 } else if (segments.length - 1 !== i) {
                     currentPath += '';
-                    breadcrumbs += '<a href="' + currentPath + '">Root<\/a>';
+                    breadcrumbs += '<a href="' + currentPath + '">/<\/a>';
                 }
             }
             document.getElementById('breadcrumbs').innerHTML = breadcrumbs;
