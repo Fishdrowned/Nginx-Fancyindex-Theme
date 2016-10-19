@@ -47,14 +47,16 @@
 }
 
 html, body{
-    /* height: 100%; */
     font-size:100%;
     background-color:#f7f7f7;
     font-family:Consolas, "Liberation Mono", Monaco, "Lucida Console", monospace;
+    margin:0;
 }
 
 .box{
     border:1px solid #d9d6d6;
+    margin:6px auto 0;
+    max-width:1000px;
     width:100%;
 }
 
@@ -198,10 +200,8 @@ td > a:hover{
 
     /* I C O N S (only on 1024+ px resolutions)
     ~~~~~~~~~~~~*/
-    #list a[href*="."]:before, #list a[href*="/"]:before,
-    #list a[href~="INSTALL"]:before, #list a[href~="README"]:before,
-    #list a[href~="CHANGELOG"]:before, #list a[href~="COPYING"]:before{
-        background:url('../icons/file.png') left center no-repeat;
+    #list td a:before{
+        background:url('../icons/file.png') no-repeat left center;
         content:"";
         padding:2px 22px 0 0;
     }
@@ -211,253 +211,245 @@ td > a:hover{
     }
 
     #list a[href$="/"]:before, #list a[href*="/?"]:before{
-        background:url('../icons/folder_black.png') left center no-repeat;
+        background-image:url('../icons/folder_black.png');
     }
 
     /* A P P L I C A T I O N
     ~~~~~~~~~~~~~~~~~~~~~~~~*/
     #list a[href$=".doc"]:before{
-        background:url('../icons/doc.png') left center no-repeat;
+        background-image:url('../icons/doc.png');
     }
 
     #list a[href$=".pdf"]:before{
-        background:url('../icons/pdf.png') left center no-repeat;
+        background-image:url('../icons/pdf.png');
     }
 
     #list a[href$=".pgp"]:before{
-        background:url('../icons/pgp.png') left center no-repeat;
+        background-image:url('../icons/pgp.png');
     }
 
     #list a[href$=".xml"]:before{
-        background:url('../icons/xml.png') left center no-repeat;
+        background-image:url('../icons/xml.png');
     }
 
     #list a[href$=".xls"]:before{
-        background:url('../icons/xls.png') left center no-repeat;
+        background-image:url('../icons/xls.png');
     }
 
     #list a[href$=".ppt"]:before{
-        background:url('../icons/ppt.png') left center no-repeat;
+        background-image:url('../icons/ppt.png');
     }
 
     #list a[href$=".7z"]:before{
-        background:url('../icons/7z.png') left center no-repeat;
+        background-image:url('../icons/7z.png');
     }
 
     #list a[href$=".torrent"]:before{
-        background:url('../icons/file.png') left center no-repeat;
+        background-image:url('../icons/file.png');
     }
 
     #list a[href$=".iso"]:before{
-        background:url('../icons/iso.png') left center no-repeat;
+        background-image:url('../icons/iso.png');
     }
 
     #list a[href$=".cue"]:before, #list a[href$=".bin"]:before{
-        background:url('../icons/bin.png') left center no-repeat;
+        background-image:url('../icons/bin.png');
     }
 
     #list a[href$=".deb"]:before{
-        background:url('../icons/deb.png') left center no-repeat;
+        background-image:url('../icons/deb.png');
     }
 
     #list a[href$=".exe"]:before{
-        background:url('../icons/file.png') left center no-repeat;
+        background-image:url('../icons/file.png');
     }
 
     #list a[href$=".swf"]:before{
-        background:url('../icons/swf.png') left center no-repeat;
+        background-image:url('../icons/swf.png');
     }
 
     #list a[href$=".tgz"]:before, #list a[href$=".tar.gz"]:before,
     #list a[href$=".tar.xz"]:before{
-        background:url('../icons/tgz.png') left center no-repeat;
+        background-image:url('../icons/tgz.png');
     }
 
     #list a[href$=".xpi"]:before{
-        background:url('../icons/xpi.png') left center no-repeat;
+        background-image:url('../icons/xpi.png');
     }
 
     #list a[href$=".apk"]:before{
-        background:url('../icons/file.png') left center no-repeat;
+        background-image:url('../icons/file.png');
     }
 
     #list a[href$=".bat"]:before{
-        background:url('../icons/file.png') left center no-repeat;
+        background-image:url('../icons/file.png');
     }
 
     #list a[href$=".jar"]:before{
-        background:url('../icons/jar.png') left center no-repeat;
+        background-image:url('../icons/jar.png');
     }
 
     #list a[href$=".pl"]:before{
-        background:url('../icons/pl.png') left center no-repeat;
+        background-image:url('../icons/pl.png');
     }
 
     #list a[href$=".php"]:before{
-        background:url('../icons/php.png') left center no-repeat;
+        background-image:url('../icons/php.png');
     }
 
     #list a[href$=".rar"]:before{
-        background:url('../icons/rar.png') left center no-repeat;
+        background-image:url('../icons/rar.png');
     }
 
     #list a[href$=".rpm"]:before{
-        background:url('../icons/rpm.png') left center no-repeat;
+        background-image:url('../icons/rpm.png');
     }
 
     #list a[href$=".rb"]:before{
-        background:url('../icons/rb.png') left center no-repeat;
+        background-image:url('../icons/rb.png');
     }
 
     #list a[href$=".tar"]:before{
-        background:url('../icons/tar.png') left center no-repeat;
+        background-image:url('../icons/tar.png');
     }
 
     #list a[href$=".zip"]:before{
-        background:url('../icons/zip.png') left center no-repeat;
+        background-image:url('../icons/zip.png');
     }
 
     /* A U D I O
     ~~~~~~~~~~~~*/
     #list a[href$=".m3u"]:before{
-        background:url('../icons/audio.png') left center no-repeat;
+        background-image:url('../icons/audio.png');
     }
 
     #list a[href$=".mpeg"]:before{
-        background:url('../icons/mpg.png') left center no-repeat;
+        background-image:url('../icons/mpg.png');
     }
 
     #list a[href$=".wma"]:before{
-        background:url('../icons/audio.png') left center no-repeat;
+        background-image:url('../icons/audio.png');
     }
 
     #list a[href$=".ogg"]:before{
-        background:url('../icons/ogg.png') left center no-repeat;
+        background-image:url('../icons/ogg.png');
     }
 
     #list a[href$=".wav"]:before{
-        background:url('../icons/wav.png') left center no-repeat;
+        background-image:url('../icons/wav.png');
     }
 
     #list a[href$=".flac"]:before{
-        background:url('../icons/audio.png') left center no-repeat;
+        background-image:url('../icons/audio.png');
     }
 
     /* I M A G E
     ~~~~~~~~~~~~*/
     #list a[href$=".bmp"]:before, #list a[href$=".svg"]:before{
-        background:url('../icons/image.png') left center no-repeat;
+        background-image:url('../icons/image.png');
     }
 
     #list a[href$=".gif"]:before{
-        background:url('../icons/gif.png') left center no-repeat;
+        background-image:url('../icons/gif.png');
     }
 
     #list a[href$=".jpg"]:before, #list a[href$=".jpeg"]:before{
-        background:url('../icons/jpeg.png') left center no-repeat;
+        background-image:url('../icons/jpeg.png');
     }
 
     #list a[href$=".png"]:before{
-        background:url('../icons/png.png') left center no-repeat;
+        background-image:url('../icons/png.png');
     }
 
     #list a[href$=".tiff"]:before{
-        background:url('../icons/image.png') left center no-repeat;
+        background-image:url('../icons/image.png');
     }
 
     #list a[href$=".ico"]:before{
-        background:url('../icons/image.png') left center no-repeat;
+        background-image:url('../icons/image.png');
     }
 
     #list a[href$=".psd"]:before{
-        background:url('../icons/image.png') left center no-repeat;
+        background-image:url('../icons/image.png');
     }
 
     #list a[href$=".xcf"]:before{
-        background:url('../icons/image.png') left center no-repeat;
+        background-image:url('../icons/image.png');
     }
 
     /* T E X T
     ~~~~~~~~~~*/
     #list a[href$=".css"]:before{
-        background:url('../icons/css.png') left center no-repeat;
+        background-image:url('../icons/css.png');
     }
 
     #list a[href$=".htm"]:before, #list a[href$=".html"]:before,
     #list a[href$=".md"]:before{
-        background:url('../icons/html.png') left center no-repeat;
+        background-image:url('../icons/html.png');
     }
 
     #list a[href$=".txt"]:before, #list a[href$=".json"]:before{
-        background:url('../icons/txt.png') left center no-repeat;
+        background-image:url('../icons/txt.png');
     }
 
     #list a[href$=".csv"]:before{
-        background:url('../icons/csv.png') left center no-repeat;
+        background-image:url('../icons/csv.png');
     }
 
     #list a[href$=".conf"]:before{
-        background:url('../icons/conf.png') left center no-repeat;
+        background-image:url('../icons/conf.png');
     }
 
     #list a[href$=".rtf"]:before{
-        background:url('../icons/rtf.png') left center no-repeat;
+        background-image:url('../icons/rtf.png');
     }
 
     #list a[href$=".bak"]:before{
-        background:url('../icons/file.png') left center no-repeat;
+        background-image:url('../icons/file.png');
     }
 
     #list a[href$=".c"]:before{
-        background:url('../icons/c.png') left center no-repeat;
+        background-image:url('../icons/c.png');
     }
 
     #list a[href$=".cpp"]:before{
-        background:url('../icons/cpp.png') left center no-repeat;
+        background-image:url('../icons/cpp.png');
     }
 
-    #list a[href~="CHANGELOG"]:before{
-        background:url('../icons/txt.png') left center no-repeat;
-    }
-
-    #list a[href~="COPYING"]:before{
-        background:url('../icons/txt.png') left center no-repeat;
-    }
-
-    #list a[href~="INSTALL"]:before{
-        background:url('../icons/txt.png') left center no-repeat;
+    #list a[href~="CHANGELOG"]:before, #list a[href~="COPYING"]:before, #list a[href~="INSTALL"]:before{
+        background-image:url('../icons/txt.png');
     }
 
     #list a[href$=".java"]:before{
-        background:url('../icons/java.png') left center no-repeat;
+        background-image:url('../icons/java.png');
     }
 
     #list a[href$=".js"]:before{
-        background:url('../icons/js.png') left center no-repeat;
+        background-image:url('../icons/js.png');
     }
 
     #list a[href$=".h"]:before{
-        background:url('../icons/c.png') left center no-repeat;
+        background-image:url('../icons/c.png');
     }
 
     #list a[href$=".py"]:before{
-        background:url('../icons/py.png') left center no-repeat;
+        background-image:url('../icons/py.png');
     }
 
     #list a[href~="README"]:before{
-        background:url('../icons/txt.png') left center no-repeat;
+        background-image:url('../icons/txt.png');
     }
 
     #list a[href$=".sh"]:before{
-        background:url('../icons/file.png') left center no-repeat;
+        background-image:url('../icons/file.png');
     }
 
     #list a[href$=".sql"]:before{
-        background:url('../icons/sql.png') left center no-repeat;
+        background-image:url('../icons/sql.png');
     }
 
     #list a[href$=".xml"]:before{
-        background:url('../icons/xml.png') left center no-repeat;
+        background-image:url('../icons/xml.png');
     }
 
     /* V I D E O
@@ -465,6 +457,6 @@ td > a:hover{
     #list a[href$=".avi"]:before, #list a[href$=".mp4"]:before,
     #list a[href$=".mkv"]:before, #list a[href$=".divx"]:before,
     #list a[href$=".wmv"]:before{
-        background:url('../icons/video.png') left center no-repeat;
+        background-image:url('../icons/video.png');
     }
 }
