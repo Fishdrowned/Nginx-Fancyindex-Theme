@@ -56,7 +56,7 @@ html, body{
 .box{
     border:1px solid #d9d6d6;
     margin:6px auto 0;
-    max-width:1000px;
+    max-width:1170px;
     width:100%;
 }
 
@@ -122,10 +122,6 @@ html, body{
     background:none;
 }
 
-tbody tr:first-child{
-    display:none;
-}
-
 tr.e{
     background:#f7f7f7;
 }
@@ -158,6 +154,7 @@ h1{
 
 td{
     font-size:14px;
+    overflow:hidden;
     padding:.15em .5em;
 }
 
@@ -208,6 +205,23 @@ td > a:hover{
 
     #list a[href*="."]:after, #list a[href*="/"]:after{
         content:"";
+    }
+
+    #list a[href$="../"]{
+        position:relative;
+    }
+
+    #list a[href$="../"]:before{
+        background-image:url('../icons/folder_black.png');
+    }
+
+
+    #list a[href$="../"]:after{
+        background:#fff;
+        content:"../";
+        left:22px;
+        position:absolute;
+        width:100%;
     }
 
     #list a[href$="/"]:before, #list a[href*="/?"]:before{
