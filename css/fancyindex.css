@@ -219,7 +219,7 @@ td > a:hover{
     #list a[href$="../"]:after{
         background:#fff;
         content:"../";
-        left:22px;
+        left:21px;
         position:absolute;
         width:100%;
     }
