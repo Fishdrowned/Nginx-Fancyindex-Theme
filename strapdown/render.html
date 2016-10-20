@@ -1,54 +1,12 @@
 <!DOCTYPE html>
-<html>
 <title>Strapdown MD Renderer</title>
-
-<script>
-    var QueryString = function () {
-        // This function is anonymous, is executed immediately and
-        // the return value is assigned to QueryString!
-        var query_string = {};
-        var query = window.location.search.substring(1);
-        var vars = query.split("&");
-        for (var i = 0; i < vars.length; i++) {
-            var pair = vars[i].split("=");
-            // If first entry with this name
-            if (typeof query_string[pair[0]] === "undefined") {
-                query_string[pair[0]] = decodeURIComponent(pair[1]);
-                // If second entry with this name
-            } else if (typeof query_string[pair[0]] === "string") {
-                var arr = [query_string[pair[0]], decodeURIComponent(pair[1])];
-                query_string[pair[0]] = arr;
-                // If third or later entry with this name
-            } else {
-                query_string[pair[0]].push(decodeURIComponent(pair[1]));
-            }
-        }
-        return query_string;
-    }();
-    function httpGet(theUrl) {
-        if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
-            var xmlHttp = new XMLHttpRequest();
-        }
-        else {// code for IE6, IE5
-            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        xmlHttp.onreadystatechange = function () {
-            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-                document.getElementById("md-content").innerHTML = xmlHttp.responseText;
-            }
-        };
-        xmlHttp.open("GET", theUrl, false);
-        xmlHttp.send();
-    }
-</script>
+<script src="renderer.js"></script>
 <xmp theme="united" style="display:none;" id="md-content"></xmp>
 <script>
     (function (url, d) {
         if (url.substr(-3).toLowerCase() == '.md') {
             d.title = url;
-            httpGet(url);
+            render(httpGet(url));
         }
-    })(QueryString.url, document);
+    })(getQueryVars().url, document);
 </script>
-<script src="/.fancy/strapdown/strapdown.js"></script>
-</html>
