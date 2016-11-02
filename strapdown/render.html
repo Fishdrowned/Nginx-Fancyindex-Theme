@@ -4,7 +4,7 @@
 <xmp theme="united" style="display:none;" id="md-content"></xmp>
 <script>
     (function (url, d) {
-        if (url.substr(-3).toLowerCase() == '.md') {
+        if (url.substr(-3).toLowerCase() == '.md' || url.substr(-9).toLowerCase() == '.markdown') {
             d.title = url;
             render(httpGet(url));
         }

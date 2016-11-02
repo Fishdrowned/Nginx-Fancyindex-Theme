@@ -20,7 +20,7 @@
 <script>
     (function (w, d) {
         d.querySelectorAll("#list tbody a").forEach(function (link) {
-            if (link.href.substr(-3).toLowerCase() == '.md') {
+            if (link.href.substr(-3).toLowerCase() == '.md' || link.href.substr(-9).toLowerCase() == '.markdown') {
                 link.setAttribute('data-href', link.href);
                 link.href = '/.fancy/strapdown/render.html?url=' + encodeURI(link.href);
             }
