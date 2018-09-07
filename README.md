@@ -1,48 +1,29 @@
 NGINX FancyIndex Theme
 ===
 
-A prettier theme for nginx' fancyindex module. Further details about this excellent
-module can be found at the dev's [github page](https://github.com/aperezdc/ngx-fancyindex).
+A prettier theme for nginx's `fancyindex` module, bundled with `strapdown.js` markdown renderer.
 
-####NOTE:
-NGX-FANCYINDEX truncates the file name to 50 characters subtracts 3 and then
-appends a "..>" to the truncated name. This can be fixed by recompiling
-NGX-FANCYINDEX after changing line 55 of "ngx_http_fancyindex_module.c":
+[Original README](https://github.com/TheInsomniac/Nginx-Fancyindex-Theme)
 
-From:
+### Usage
+- Install nginx with the `fancyindex` module
+- Clone this repository to your web root with directory `.fancy`, e.g. `/srv/http/.fancy/`
+- Include `fancyindex.conf` with full path in nginx `server` config, e.g.:
+    ```nginx
+    server {
+        ...
+        include /srv/http/.fancy/fancyindex.conf;
+        ...
+    }
+    ```
+- Restart nginx
 
-    #define NGX_HTTP_FANCYINDEX_NAME_LEN 50
+### Screenshots
+* PC View  
+    ![Image1](images/fancyindex.png)
 
-To:
+* Mobile view  
+    ![Image1](images/fancyindex1.png)
 
-    #define NGX_HTTP_FANCYINDEX_NAME_LEN 500 (or some other number greater than 50)
-
-#####Usage:
- - Compile nginx with the fancyindex module.
- - Include the contents of 'fancyindex.conf' in your location directive of your nginx conf.
- - copy the remaining items in your web root under 'fancyindex'.
-  - header.html
-  - footer.html
-  - css\fancyindex.css
-  - fonts\\*
-  - images\breadcrumb.png
- - Restart your nginx server.
-
-#####Added/Modified:
- - Mime type icons from [Splitbrain](http://www.splitbrain.org/projects/file_icons)
-  - Icons default to enabled on large devices and off on small devices like phones.
-  - If you'd prefer no icons at all: copy css\fancyindex_NoIcons.css css\fancyindex.css
- - Slightly better handling of mobile CSS click areas.
- - Added HTML5 History for quicker page transitions.
-  - This can be disabled by commenting out the script tag in footer.html
- - Fixed CSS issues on older versions of FF
-
-#####Addendums:
- - If you want your 'Parent Directory/' listing back in your file listings:
-  - Read: [This Issue](https://github.com/TheInsomniac/Nginx-Fancyindex-Theme/issues/1#issuecomment-43936700)
-
-![Image1](https://raw.githubusercontent.com/TheInsomniac/Nginx-Fancyindex-Theme/master/images/fancyindex.png)
-
-![Image1](https://raw.githubusercontent.com/TheInsomniac/Nginx-Fancyindex-Theme/master/images/fancyindex1.png)
-
-![Image1](https://raw.githubusercontent.com/TheInsomniac/Nginx-Fancyindex-Theme/master/images/fancyindex2.png)
+* Markdown renderer  
+    ![Image1](images/fancyindex2.png)
