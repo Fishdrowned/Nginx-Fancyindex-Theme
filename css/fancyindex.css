@@ -55,7 +55,7 @@ html, body{
 
 .box{
     border:1px solid #d9d6d6;
-    margin:6px auto 0;
+    margin:6px auto;
     max-width:1170px;
     width:100%;
 }
@@ -80,8 +80,6 @@ html, body{
 }
 
 .box .box-content{
-    width:97%;
-    margin:20px auto;
     background:#fff;
 }
 
@@ -131,6 +129,7 @@ th, td{
 }
 
 th{
+    font-family:sans-serif;
     text-align:left;
     font-weight:500;
     background:#eee;
@@ -148,7 +147,6 @@ h1{
 }
 
 #list{
-    border:1px solid #d9d6d6;
     width:100%;
 }
 
@@ -183,13 +181,6 @@ td > a:hover{
 
     thead > tr > th:nth-child(3){
         display:none;
-    }
-
-    .box .box-content{
-        padding-top:20px;
-        padding-bottom:0;
-        padding-left:0;
-        padding-right:0;
     }
 }
 
@@ -473,4 +464,13 @@ td > a:hover{
     #list a[href$=".wmv"]:before{
         background-image:url('../icons/video.png');
     }
+}
+
+@media screen and (max-width:480px){
+    .box{border:0;margin:0;}
+    tr,th,td{display:block;}
+    tr{position:relative;}
+    tr > td:nth-child(2){background:#fff;position:absolute;right:0;top:0;}
+    thead > tr > th:nth-child(2){position:absolute;right:0;top:0;}
+    th,td{width:auto!important;word-break:break-word;}
 }
