@@ -7,7 +7,8 @@ A prettier theme for nginx's `fancyindex` module, bundled with `strapdown.js` ma
 
 ### Usage
 - Install nginx with the `fancyindex` module
-- Clone this repository to your web root with directory `.fancy`, e.g. `git clone https://github.com/Fishdrowned/Nginx-Fancyindex-Theme.git /srv/http/.fancy/`
+- Clone this repository to your web root with directory `.fancy`, e.g.:  
+`git clone https://github.com/Fishdrowned/Nginx-Fancyindex-Theme.git /srv/http/.fancy/`
 - Include `fancyindex.conf` with full path in nginx `server` config, e.g.:
     ```nginx
     server {
